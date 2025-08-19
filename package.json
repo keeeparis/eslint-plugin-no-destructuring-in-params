@@ -1,6 +1,6 @@
 {
-  "name": "eslint-plugin-no-destructuring-in-params",
-  "version": "1.0.1",
+  "name": "@keeeparis/eslint-plugin",
+  "version": "1.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -16,3 +16,4 @@
     "eslint": ">=8.0.0"
   }
 }
+
