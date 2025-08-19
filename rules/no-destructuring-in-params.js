@@ -2,15 +2,14 @@ module.exports = {
   meta: {
     type: 'problem',
     docs: {
-      description:
-        'Запрещает деструктуризацию пропсов в параметрах React-компонентов',
+      description: 'Disables props destructuring in React params',
       recommended: false,
     },
     schema: [],
     fixable: 'code',
     messages: {
       noDestructure:
-        'Не деструктурируй props в параметрах функции. Используй const { ... } = props внутри тела.',
+        'Don’t destructure props in the function parameters. Instead, use const { ... } = props inside the function body.',
     },
   },
   create(context) {
@@ -60,9 +59,6 @@ module.exports = {
                 const sourceCode = context.getSourceCode()
                 const destructText = sourceCode.getText(param)
 
-                // Пример: { a, b }
-                // Фикс: заменить параметр на props
-                // и добавить внутри тела: const { a, b } = props;
                 const fixes = []
 
                 fixes.push(fixer.replaceText(param, 'props'))
